@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Aroma Menu</title>
+  <style>
+    :root {
+      --main-color: #52392c;
+      --accent-color: #d8a47f;
+      --bg-light: #f8f3eb;
+      --text-dark: #3e2c23;
+      --menu-bg: #fff7ef;
+    }
+    body {
+      background: var(--bg-light);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: var(--text-dark);
+    }
+    .menu-container {
+      max-width: 950px;
+      background: var(--menu-bg);
+      margin: 32px auto;
+      border-radius: 18px;
+      box-shadow: 0 8px 28px rgba(82,57,44,0.09);
+      padding: 36px 48px;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 18px;
+      border-bottom: 1.5px dashed var(--accent-color);
+      margin-bottom: 32px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 0.03em;
+      color: var(--main-color);
+    }
+    header p {
+      margin: 5px 0 0;
+      color: var(--accent-color);
+      font-size: 1.05rem;
+    }
+    .menu-section {
+      margin-bottom: 28px;
+    }
+    .menu-title {
+      font-size: 1.35rem;
+      color: var(--main-color);
+      border-left: 5px solid var(--accent-color);
+      padding-left: 15px;
+      margin: 0 0 12px 0;
+    }
+    .items-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-start;
+    }
+    .menu-item {
+      flex: 0 0 48%;
+      background: var(--bg-light);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(82,57,44,0.07);
+      padding: 16px 18px;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 220px;
+    }
+    .item-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .item-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--main-color);
+      margin-bottom: 3px;
+    }
+    .item-desc {
+      font-size: 0.95rem;
+      color: #876e5b;
+      margin-bottom: 2px;
+    }
+    .item-price {
+      font-size: 1.05rem;
+      color: var(--accent-color);
+      font-weight: 700;
+      white-space: nowrap;
+      margin-left: 16px;
+    }
+    /* Responsive layout for mobile */
+    @media (max-width: 700px) {
+      .menu-container {
+        padding: 18px 7px;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+      }
+      .menu-item {
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+    @media (max-width: 420px) {
+      .menu-title {
+        font-size: 1.13rem;
+      }
+      .item-name {
+        font-size: 0.98rem;
+      }
+      .item-price {
+        font-size: 0.97rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <header>
+      <h1>Aman The CAFE </h1>
+      <p>Fresh Brews & Daily Bakes</p>
+    </header>
+
+    <section class="menu-section">
+      <h2 class="menu-title">Drinks</h2>
+      <div class="items-list">
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Espresso</span>
+            <span class="item-desc">Rich & bold, single shot</span>
+          </div>
+          <span class="item-price">₹10</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Cappuccino</span>
+            <span class="item-desc">Espresso, hot milk & froth</span>
+          </div>
+          <span class="item-price">₹20</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Latte</span>
+            <span class="item-desc">Espresso blended with steamed milk</span>
+          </div>
+          <span class="item-price">₹30</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Iced Coffee</span>
+            <span class="item-desc">Chilled, smooth & refreshing</span>
+          </div>
+          <span class="item-price">₹10</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Masala Chai</span>
+            <span class="item-desc">Classic spiced Indian tea</span>
+          </div>
+          <span class="item-price">₹5</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="menu-title">Pastries</h2>
+      <div class="items-list">
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Croissant</span>
+            <span class="item-desc">Flaky, buttery French pastry</span>
+          </div>
+          <span class="item-price">50</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Chocolate Muffin</span>
+            <span class="item-desc">Decadent & moist</span>
+          </div>
+          <span class="item-price">₹20</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Cinnamon Roll</span>
+            <span class="item-desc">Sweet, spiced swirl, icing drizzle</span>
+          </div>
+          <span class="item-price">₹25</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Banana Bread</span>
+            <span class="item-desc">Homestyle, nutty & soft</span>
+          </div>
+          <span class="item-price">₹7</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="menu-title">Sandwiches</h2>
+      <div class="items-list">
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Veggie Delight</span>
+            <span class="item-desc">Garden veggies, cheese, brown bread</span>
+          </div>
+          <span class="item-price">₹15</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Grilled Chicken</span>
+            <span class="item-desc">Chicken, lettuce, mayo, toasted bread</span>
+          </div>
+          <span class="item-price">₹15</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Paneer Tikka</span>
+            <span class="item-desc">Spicy paneer, grilled veggies</span>
+          </div>
+          <span class="item-price">₹19</span>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <span class="item-name">Egg Mayo</span>
+            <span class="item-desc">Egg, creamy mayo, herbs</span>
+          </div>
+          <span class="item-price">₹199</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

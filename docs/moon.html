@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Revolving Around Earth</title>
+  <style>
+    body {
+      background: radial-gradient(ellipse at bottom, #232838 0%, #10121a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .space {
+      position: relative;
+      width: 340px;
+      height: 340px;
+    }
+    .orbit {
+      width: 300px;
+      height: 300px;
+      border: 1.3px dashed rgba(255,255,255,0.2);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .earth {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at 60% 40%, #5bd5eb 70%, #2776b7 100%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 38px 0 #59e5f7b5;
+    }
+    .moon-orbit {
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      /* Animation: rotates this container, moon inside follows orbit */
+      animation: revolution 9s linear infinite;
+    }
+    .moon {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      top: 50%;
+      left: 85%;
+      background: radial-gradient(circle at 65% 35%, #e1e1e1 75%, #959595 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 13px 4px #f1eaea9a, 0 1px 6px #7b7b7b50;
+      transform: translate(-50%, -50%);
+    }
+    /* Keyframes for revolution */
+    @keyframes revolution {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+    /* Responsive Design */
+    @media (max-width: 430px) {
+      .space { width: 220px; height: 220px; }
+      .orbit, .moon-orbit { width: 180px; height: 180px; }
+      .earth { width: 48px; height: 48px; }
+      .moon { width: 18px; height: 18px; left: 88%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="space">
+    <div class="orbit"></div>
+    <div class="earth"></div>
+    <div class="moon-orbit">
+      <div class="moon"></div>
+    </div>
+  </div>
+</body>
+</html>
